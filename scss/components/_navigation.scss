@@ -7,20 +7,46 @@
   flex-basis: 100%;
   display: flex;
   flex-direction: column;
+  @include min-break($break-med) {
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  & .nav-link {
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px 0;
+    display: block;
+    width: 100%;
+    transition: 
+      background-color .2s ease-in-out, 
+      color .2s ease-in-out;
+    @include min-break($break-med) {
+      flex-basis: 100px;
+    }
+    &:hover {
+      color: #fff;
+      background-color: lighten($primary-color, 15%);
+      transition: background-color 1s ease-in-out, color .5s ease-in-out;
+    }
+  }
 }
 
-.nav-link {
-  text-align: center;
-  border-radius: 5px;
-  padding: 10px 0;
-  display: block;
-  width: 100%;
-  transition: 
-    background-color .2s ease-in-out, 
-    color .2s ease-in-out;
-}
+// .nav-link {
+//   text-align: center;
+//   border-radius: 5px;
+//   padding: 10px 0;
+//   display: block;
+//   width: 100%;
+//   transition: 
+//     background-color .2s ease-in-out, 
+//     color .2s ease-in-out;
+//   @include min-break($break-med) {
+//     flex-basis: 100px;
+//   }
+// }
 
-.nav-link:hover {
-  color: #fff;
-  background-color: #58e1c1;
-}
+// .nav-link:hover {
+//   color: #fff;
+//   background-color: $primary-color;
+// }

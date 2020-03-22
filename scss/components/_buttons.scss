@@ -10,24 +10,27 @@
   padding: 10px 0;
   text-transform: uppercase;
   border-radius: 5px;
+  @include min-break($break-med) {
+    padding: 10px 30px;
+  }
 }
 
 .default {
-  background-color: #51ddfc;
+  background-color: $default;
 }
 
 .error {
-  background-color: #e4757a;
+  background-color: $error;
 }
 
 .info {
-  background-color: #927bc1;
+  background-color: $info;
 }
 
 .success {
-  background-color: #63cc82;
+  background-color: $success;
 }
 
 .warning {
-  background-color: #fd7856;
+  background-color: $warning;
 }

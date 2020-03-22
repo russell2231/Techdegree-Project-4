@@ -25,4 +25,8 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
+  @include min-break($break-med) {
+    margin-left: initial;
+    margin-right: initial;
+  }
 }
